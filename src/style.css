@@ -18,46 +18,46 @@ body {
 }
 
 .main-content {
-    min-height: 100vh;
+  min-height: 100vh;
 }
 
 .card-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    justify-content: flex-start;
-    align-items: flex-start;
-    overflow: hidden;
-    width: 850px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow: hidden;
+  width: 850px;
 }
 
 .card {
-    padding: 5px;
-    box-sizing: border-box;
-    border-radius: 5px;
-    border: 1px solid #dadada;
-    margin: 10px;
-    flex-basis: 150px;
-    flex-grow: 0;
-    flex-shrink: 0;
-    height: 104px !important;
-    overflow: hidden;
-    cursor: pointer;
+  padding: 5px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #dadada;
+  margin: 10px;
+  flex-basis: 150px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  height: 104px !important;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .card figure {
-    margin: 0;
-    overflow: hidden;
-    position: relative;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
 }
 
 .card figure figcaption {
-    text-align: center;
-    background-color: #f7f7f7;
-    position: absolute;
-    left: 0px;
-    bottom: 0px;
-    transform: translateY(100%);
-    width: 100%;
+  text-align: center;
+  background-color: #f7f7f7;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  transform: translateY(100%);
+  width: 100%;
 }
