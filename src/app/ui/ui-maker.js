@@ -23,3 +23,9 @@ export function makeFooter() {
     footer.setAttribute('description', 'copyright 2021 Tefan Haetami');
     return footer;
 }
+
+export function makeToolbar() {
+    const toolbar = document.createElement('div');
+    toolbar.setAttribute('class', 'toolbar');
+    return toolbar;
+}
