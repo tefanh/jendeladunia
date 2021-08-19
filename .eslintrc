@@ -5,12 +5,10 @@
   },
   "extends": [
     "eslint:recommended",
-    "prettier",
-    "prettier/babel",
-    "prettier/prettier"
+    "prettier"
   ],
   "parserOptions": {
-    "ecmaVersion": 6,
+    "ecmaVersion": 8,
     "sourceType": "module"
   },
   "rules": {

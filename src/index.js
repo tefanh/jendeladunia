@@ -8,7 +8,6 @@ import {
   makeFooter,
   makeToolbar,
   appendCountry,
-  makeSidebar,
   makeSearchForm,
   makeRegionForm,
   makeModal,

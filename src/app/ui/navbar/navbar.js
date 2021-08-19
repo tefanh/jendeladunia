@@ -1,18 +1,15 @@
-import { base_color } from '../../app.config';
 import logo from '../../../assets/imgs/logo.png';
 
 export default class Navbar extends HTMLElement {
-  title = null;
-
   constructor() {
     super();
     this._shadowRoot = this.attachShadow({ mode: 'open' });
   }
 
   connectedCallback() {
-    this.title = this.getAttribute('title') || null;
+    this._title = this.getAttribute('title') || null;
     this.render();
-    document.onscroll = (e) => {
+    document.onscroll = () => {
       if (document.body.scrollTop >= 10) {
         this._shadowRoot.querySelector('nav').style.boxShadow =
           '0px 1px 30px -20px #222222';
@@ -52,7 +49,7 @@ export default class Navbar extends HTMLElement {
             }
         </style>
         <nav>
-          <img src="${logo}" alt="${this.title}" id="brand" />
+          <img src="${logo}" alt="${this._title}" id="brand" />
         </nav>
     `;
   }

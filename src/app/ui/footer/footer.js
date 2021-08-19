@@ -1,15 +1,11 @@
-import { base_color } from '../../app.config';
-
 export default class Footer extends HTMLElement {
-  description = null;
-
   constructor() {
     super();
     this._shadowRoot = this.attachShadow({ mode: 'open' });
   }
 
   connectedCallback() {
-    this.description = this.getAttribute('description') || null;
+    this._description = this.getAttribute('description') || null;
     this.render();
   }
 
@@ -42,7 +38,7 @@ export default class Footer extends HTMLElement {
             }
         </style>
         <footer>
-            ${this.description}
+            ${this._description}
         </footer>
     `;
   }
