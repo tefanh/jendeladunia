@@ -1,4 +1,5 @@
 import { base_color } from '../../app.config';
+import logo from '../../../assets/imgs/logo.png';
 
 export default class Navbar extends HTMLElement {
   title = null;
@@ -11,6 +12,14 @@ export default class Navbar extends HTMLElement {
   connectedCallback() {
     this.title = this.getAttribute('title') || null;
     this.render();
+    document.onscroll = (e) => {
+      if (document.body.scrollTop >= 10) {
+        this._shadowRoot.querySelector('nav').style.boxShadow =
+          '0px 1px 30px -20px #222222';
+      } else {
+        this._shadowRoot.querySelector('nav').style.boxShadow = 'none';
+      }
+    };
   }
 
   adoptedCallback() {}
@@ -34,18 +43,16 @@ export default class Navbar extends HTMLElement {
                 box-sizing: border-box;
             }
             nav {
-                background-color: ${base_color.primary};
-                padding: 20px 20px;
+                background-color: #ffffff;
+                padding: 12px;
                 z-index: 99999;
             }
             #brand {
-                text-decoration: none;
-                font-size: 21px;
-                letter-spacing: 1px;
+              width: 125px;
             }
         </style>
         <nav>
-            <a href="#" id="brand">${this.title}</a>
+          <img src="${logo}" alt="${this.title}" id="brand" />
         </nav>
     `;
   }

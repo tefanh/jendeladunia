@@ -35,7 +35,7 @@ export default class Footer extends HTMLElement {
             }
             footer {
                 padding: 50px 20px;
-                background-color: ${base_color.accent};
+                background-color: #ffffff;
                 font-size: 16px;
                 text-align: center;
                 font-weight: bolder;
